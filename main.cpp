@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "NumeralConverter.h"
+#include "ConverterTester.h"
 
 using namespace std;
 
@@ -8,6 +9,9 @@ using namespace std;
 
 int main()
 {
+    numcon::ConverterTester unitTester = numcon::ConverterTester();
+    unitTester.run_tests();
+
     cout << "Ryan's Numeral Converter\n" << endl;
     cout << "Enter an Arabic or Roman numeral and it will be converted to the other type." << endl;
     cout << "Type 'quit' to exit." << endl;
