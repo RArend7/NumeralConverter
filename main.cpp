@@ -1,7 +1,10 @@
 #include <iostream>
 #include <string>
+#include "NumeralConverter.h"
 
 using namespace std;
+
+#define QUIT_STRING "quit"
 
 int main()
 {
@@ -11,10 +14,16 @@ int main()
     cout << endl;
 
     string input;
+    numcon::NumeralConverter mainConverter = numcon::NumeralConverter();
 
-    while (input != "quit")
+    while (input != QUIT_STRING)
     {
         cin >> input;
+        if (input == QUIT_STRING)
+            break;
+
+        string output = mainConverter.convert_numeral(input);
+        cout << output << "\n" << endl;
     }
 
     return 0;
