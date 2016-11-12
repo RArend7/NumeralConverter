@@ -13,5 +13,16 @@ NumeralConverter::~NumeralConverter()
 
 std::string NumeralConverter::convert_numeral(std::string input)
 {
-    return input;
+    if (numeralValidator.is_roman_numeral(input))
+    {
+        return input;
+    }
+    else if (numeralValidator.is_arabic_numeral(input))
+    {
+        return input;
+    }
+    else
+    {
+        return "Input not recognized as valid, please try again";
+    }
 }
