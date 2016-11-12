@@ -2,6 +2,7 @@
 #define NUMERALCONVERTER_H
 
 #include <string>
+#include "NumeralValidator.h"
 
 namespace numcon
 {
@@ -15,6 +16,7 @@ namespace numcon
         protected:
 
         private:
+            NumeralValidator numeralValidator;
     };
 }
 
