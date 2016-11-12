@@ -22,6 +22,6 @@ bool NumeralValidator::is_roman_numeral(std::string& input)
 
 bool NumeralValidator::is_arabic_numeral(std::string& input)
 {
-    std::regex arabic_regex("");
+    std::regex arabic_regex("^[[:digit:]]+$");
     return std::regex_match(input, arabic_regex);
 }
