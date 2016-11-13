@@ -10,8 +10,8 @@ namespace numcon
         public:
             NumeralValidator();
             virtual ~NumeralValidator();
-            bool is_roman_numeral(std::string& input);
-            bool is_arabic_numeral(std::string& input);
+            bool is_roman_numeral(const std::string& input);
+            bool is_arabic_numeral(const std::string& input);
 
         protected:
 
