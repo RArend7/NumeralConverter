@@ -1,5 +1,6 @@
 #include "NumeralConverter.h"
 #include "stdlib.h"
+#include <sstream>
 using namespace numcon;
 
 NumeralConverter::NumeralConverter()
@@ -19,7 +20,11 @@ std::string NumeralConverter::convert_numeral(std::string input)
 {
     if (numeralValidator.is_roman_numeral(input))
     {
-        return input;
+        int int_output = toArabicConverter.convert(input);
+        std::stringstream ss;
+        ss << int_output;
+        std::string str_output = ss.str();
+        return str_output;
     }
     else if (numeralValidator.is_arabic_numeral(input))
     {
