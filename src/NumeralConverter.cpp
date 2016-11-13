@@ -23,9 +23,23 @@ std::string NumeralConverter::convert_numeral(std::string input)
         int input_as_int = atoi(input.c_str());
 
         if (input_as_int > 3999)
+        {
             return "Roman numerals can realistically go as high as 3999. Try using a smaller number.";
+        }
         else
-            return toRomanConverter.convert(input_as_int);
+        {
+            std::string converted_string = toRomanConverter.convert(input_as_int);
+            if (numeralValidator.is_roman_numeral(converted_string))
+            {
+                return converted_string;
+            }
+            else
+            {
+                // this shouldn't happen, but I'd like the program to tell me if it does
+                return converted_string += " (This was flagged as an invalid Roman numeral. Oops.)";
+            }
+        }
+
     }
     else
     {
