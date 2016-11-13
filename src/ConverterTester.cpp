@@ -126,9 +126,19 @@ void ConverterTester::check_roman_conversion()
     assert(output == "C");
     std::cout << input << " successfully converted to " << output << std::endl;
 
+    input = "459";
+    output = numeralConverter.convert_numeral(input);
+    assert(output == "CDLIX");
+    std::cout << input << " successfully converted to " << output << std::endl;
+
     input = "500";
     output = numeralConverter.convert_numeral(input);
     assert(output == "D");
+    std::cout << input << " successfully converted to " << output << std::endl;
+
+    input = "942";
+    output = numeralConverter.convert_numeral(input);
+    assert(output == "CMXLII");
     std::cout << input << " successfully converted to " << output << std::endl;
 
     input = "1000";
@@ -219,9 +229,19 @@ void ConverterTester::check_arabic_conversion()
     assert(output == "100");
     std::cout << input << " successfully converted to " << output << std::endl;
 
+    input = "CDLIX";
+    output = numeralConverter.convert_numeral(input);
+    assert(output == "459");
+    std::cout << input << " successfully converted to " << output << std::endl;
+
     input = "D";
     output = numeralConverter.convert_numeral(input);
     assert(output == "500");
+    std::cout << input << " successfully converted to " << output << std::endl;
+
+    input = "CMXLII";
+    output = numeralConverter.convert_numeral(input);
+    assert(output == "942");
     std::cout << input << " successfully converted to " << output << std::endl;
 
     input = "M";
