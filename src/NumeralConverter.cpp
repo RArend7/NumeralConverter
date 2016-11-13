@@ -23,6 +23,6 @@ std::string NumeralConverter::convert_numeral(std::string input)
     }
     else
     {
-        return "Input not recognized as valid, please try again";
+        return "Input not recognized as valid, please try again.";
     }
 }
