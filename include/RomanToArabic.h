@@ -10,7 +10,7 @@ namespace numcon
         public:
             RomanToArabic();
             virtual ~RomanToArabic();
-            int convert(std::string input);
+            int convert(const std::string& input);
 
         protected:
 
