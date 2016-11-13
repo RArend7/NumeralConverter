@@ -5,6 +5,9 @@ using namespace numcon;
 NumeralConverter::NumeralConverter()
 {
     //ctor
+    numeralValidator = NumeralValidator();
+    toRomanConverter = ArabicToRoman();
+    toArabicConverter = RomanToArabic();
 }
 
 NumeralConverter::~NumeralConverter()
