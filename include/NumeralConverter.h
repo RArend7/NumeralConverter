@@ -4,6 +4,7 @@
 #include <string>
 #include "NumeralValidator.h"
 #include "ArabicToRoman.h"
+#include "RomanToArabic.h"
 
 namespace numcon
 {
@@ -19,6 +20,7 @@ namespace numcon
         private:
             NumeralValidator numeralValidator;
             ArabicToRoman toRomanConverter;
+            RomanToArabic toArabicConverter;
     };
 }
 
