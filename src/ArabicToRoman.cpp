@@ -1,4 +1,3 @@
-#include <sstream>
 #include "ArabicToRoman.h"
 
 using namespace numcon;
@@ -15,7 +14,7 @@ ArabicToRoman::~ArabicToRoman()
 
 std::string ArabicToRoman::convert(int input)
 {
-    std::string output_string;
+    std::string output_string = "";
 
     while (input > 0)
     {
@@ -24,31 +23,77 @@ std::string ArabicToRoman::convert(int input)
             input -= 1000;
             output_string += "M";
         }
+
         else if (input >= 500)
         {
-            input -= 500;
-            output_string += "D";
+            if (input >= 900)
+            {
+                input -= 900;
+                output_string += "CM";
+            }
+            else
+            {
+                input -= 500;
+                output_string += "D";
+            }
         }
+
         else if (input >= 100)
         {
-            input -= 100;
-            output_string += "C";
+            if (input >= 400)
+            {
+                input -= 400;
+                output_string += "CD";
+            }
+            else
+            {
+                input -= 100;
+                output_string += "C";
+            }
         }
+
         else if (input >= 50)
         {
-            input -= 50;
-            output_string += "L";
+            if (input >= 90)
+            {
+                input -= 90;
+                output_string += "XC";
+            }
+            else
+            {
+                input -= 50;
+                output_string += "L";
+            }
         }
+
         else if (input >= 10)
         {
-            input -= 10;
-            output_string += "X";
+            if (input >= 40)
+            {
+                input -= 40;
+                output_string += "XL";
+            }
+            else
+            {
+                input -= 10;
+                output_string += "X";
+            }
         }
+
         else if (input >= 5)
         {
-            input -= 5;
-            output_string += "V";
+            if (input == 9)
+            {
+                input -= 9;
+                output_string += "IX";
+            }
+            else
+            {
+                input -= 5;
+                output_string += "V";
+            }
         }
+
         else if (input >= 1)
         {
             if (input == 4)
