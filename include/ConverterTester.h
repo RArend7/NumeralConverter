@@ -21,6 +21,7 @@ namespace numcon
 
             NumeralConverter numeralConverter;
             void check_input();
+            void check_roman_conversion();
     };
 }
 
